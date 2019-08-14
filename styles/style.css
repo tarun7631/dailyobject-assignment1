@@ -37,6 +37,9 @@ body {
       z-index:999!important;
     }
 
+.tal{
+  text-align: left;
+}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -222,7 +225,11 @@ Helpers
 .additional-info h3{
   margin-top: 10px ;
   margin-bottom: 10px;
-  color: #1E2D5A
+  color: #1E2D5A;
+}
+
+.additional-info{
+  width: 100% ;
 }
 
 .additional-info p{
