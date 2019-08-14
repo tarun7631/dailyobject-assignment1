@@ -1,0 +1,31 @@
+
+
+
+<div class="user-profile">
+	<div layout="row" class="tac">
+	    <div flex="20" flex-gt-xs="25" class="m10"><img src="{{userinfo.avatar_url}}" style="width: 200px;height: 200px" /></div>
+	    <div flex="" flex-gt-xs="" class="user-name">
+	    	<h1 ng-if="userinfo.name">{{userinfo.name}}</h1>
+	    	<h1 ng-if="!userinfo.name">{{userinfo.login}}</h1>
+	    	<p>{{userinfo.bio}}</p>
+	    	<p>{{userinfo.location}}</p>
+	    </div>
+	</div>
+
+	<div layout="row" class="tac">
+		<div flex="20" layout="column" class="additional-info">
+			<div>
+				<p>FOLLOWERS</p>
+				<h3>{{userinfo.followers}}</h3>
+			</div>
+			<div>
+				<p>FOLLOWING</p>
+				<h3>{{userinfo.following}}</h3>				
+			</div>
+		</div>
+
+		<div flex="" layout="column">
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<md-input-container class="md-block" style="margin: 30px 10px 5px">
+    <label>Search</label>
+    <input ng-model="userSearch" ng-change="search()">
+</md-input-container>
+
+
+<md-grid-list
+    md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
+    md-row-height-gt-md="1:1" md-row-height="4:3"
+    md-gutter="8px" md-gutter-gt-sm="4px" >
+    <div flex-xs flex-gt-xs="25" ng-repeat="user in users" style="float: left ;" class="desktop">
+        <md-card >
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{user.login}}</span>
+                <span class="md-subhead">ID : {{user.id}}</span>
+            </md-card-title-text>
+            <md-card-title-media>
+                <div class="md-media-sm card-media"><img src="{{user.avatar_url}}"></div>
+            </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="gerUserFollowers(user.login)">Followers</md-button>
+            <md-button ng-click="gerUserDetail(user.login)">View</md-button>
+        </md-card-actions>
+    </md-card>
+</div>
+</md-grid-list>
